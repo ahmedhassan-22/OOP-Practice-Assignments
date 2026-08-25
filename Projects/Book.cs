@@ -2,37 +2,34 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Projects
+
+namespace BookLibrary
 {
-    class Book
+    public class Book
     {
-        private int _totalCopies;
 
         public string Title { get; set; }
-        public string Other { get; set; }
-        public int Isbn { get; set; }
-       
-        public int TotalCobies
-        {
-            set
-            { _totalCopies = value; }
-            get 
-            { return _totalCopies; }
-        }
-        public Book(string title , string other,int isbn,int copies )
-        {
-            if (copies < 0)
-                throw new ArgumentException("Copies cannot be negative.");
+        public string Author { get; set; }
+        public string ISBN { get; set; }
+        public int TotalCopies { get; set; }
+        public int AvailableCopies { get; set; }
 
+        public Book(string title, string author, string isbn, int totalCopies)
+        {
             Title = title;
-            Other = other;
-            Isbn = isbn;
-            TotalCobies = copies;
-        }
-        public bool Borrow()
-        {
-            if()
+            Author = author;
+            ISBN = isbn;
+            TotalCopies = totalCopies;
+            AvailableCopies = totalCopies;
         }
 
-    }    
+        public string AvailabilityStatus()
+        {
+            if (AvailableCopies == 0)
+                return "Not Available";
+
+            return $"{AvailableCopies} copy/copies available";
+        }
+
+    }
 }
