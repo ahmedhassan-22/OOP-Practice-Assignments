@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed\\source\\repos\\Projects\\Projects\\Projects.csproj",
-      "projectName": "Projects",
-      "projectPath": "C:\\Users\\Ahmed\\source\\repos\\Projects\\Projects\\Projects.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmed\\source\\repos\\Projects\\Projects\\BookLibrary.csproj",
+      "projectName": "BookLibrary",
+      "projectPath": "C:\\Users\\Ahmed\\source\\repos\\Projects\\Projects\\BookLibrary.csproj",
       "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ahmed\\source\\repos\\Projects\\Projects\\obj\\",
       "projectStyle": "PackageReference",
