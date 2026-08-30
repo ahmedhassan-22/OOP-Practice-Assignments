@@ -14,19 +14,7 @@ namespace BookLibrary
         static void Main(string[] args)
         {
 
-            //string filePath = "test.txt";
-            //List<string> catalog = new List<string>();
-            //try
-            //{
-            //    if (File.Exists(filePath))
-            //    {
-            //        catalog = File.ReadAllLines(filePath).ToList();
-            //    }
-            //}
-            //catch
-            //{
-            //    Console.WriteLine("An error while reading the file.");
-            //}
+          
 
             Library library = new Library();
          

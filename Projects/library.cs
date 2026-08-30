@@ -13,8 +13,7 @@ namespace BookLibrary
 
         private void SaveBooks()
         {
-            using StreamWriter writer =
-                new StreamWriter("Books.txt", false, Encoding.UTF8);
+            using StreamWriter writer = new StreamWriter("Books.txt", false, Encoding.UTF8);
 
             foreach (Book book in books)
             {
@@ -47,17 +46,17 @@ namespace BookLibrary
             catch(Exception M)
             { Console.WriteLine(M.Message); }
 
-            //string bookData = $"{title},{author},{isbn},{totalCopies},{availableCobies}{Environment.NewLine}";
-            //byte[] bytes = Encoding.UTF8.GetBytes(bookData);
+            string bookData = $"{title},{author},{isbn},{totalCopies},{availableCobies}{Environment.NewLine}";
+            byte[] bytes = Encoding.UTF8.GetBytes(bookData);
 
-            //using (FileStream file = new FileStream(
-            //    "Books.txt",
-            //    FileMode.Append,
-            //    FileAccess.Write))
-            //{
-            //    file.Write(bytes, 0, bytes.Length);
-            //}
-            SaveBooks();
+            using (FileStream file = new FileStream(
+                "Books.txt",
+                FileMode.Append,
+                FileAccess.Write))
+            {
+                file.Write(bytes, 0, bytes.Length);
+            }
+
             return true;
 
         }
