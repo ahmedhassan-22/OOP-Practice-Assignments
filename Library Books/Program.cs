@@ -1,18 +1,23 @@
 ﻿using BookLibrary;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.IO;
 
-namespace Projects
+using System.IO;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace BookLibrary
 {
     class program
     {
-      
+
         static void Main(string[] args)
         {
+
+          
+
             Library library = new Library();
-           
+         
             while (true)
             {
                 Console.WriteLine("\n===== Book Library System =====");
@@ -29,24 +34,24 @@ namespace Projects
                 switch (choice)
                 {
                     case "1":
-                        AddBook(library);
-                        Fille();
+                        Methods.AddBook(library);
+
                         break;
 
                     case "2":
-                        BorrowBook(library);
+                        Methods.BorrowBook(library);
                         break;
 
                     case "3":
-                        ReturnBook(library);
+                        Methods.ReturnBook(library);
                         break;
 
                     case "4":
-                        ListBooks(library);
+                        Methods.ListBooks(library);
                         break;
 
                     case "5":
-                        SearchBooks(library);
+                        Methods.SearchBooks(library);
                         break;
 
                     case "6":
