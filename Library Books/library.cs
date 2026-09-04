@@ -86,15 +86,18 @@ namespace BookLibrary
         {
             if (isbn == null)
                 return false;
+
             foreach(Book book in books)
             {
                 if (book.ISBN.Equals(isbn, StringComparison.OrdinalIgnoreCase))
+                {
                     if (book.AvailableCopies >= book.TotalCopies)
-                    return false;
+                        return false;
 
-                book.AvailableCopies++;
-                SaveBooks();
-                return true;
+                    book.AvailableCopies++;
+                    SaveBooks();
+                    return true;
+                }
             }
            
             return false;
